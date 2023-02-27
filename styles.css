@@ -1,0 +1,187 @@
+/* Base styles */
+
+body {
+  background-image: url('assets/img-bg-desktop.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 40%;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 40%;
+}
+
+.box {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  margin: 10px;
+  position: relative;
+  width: 110px;
+  height: 160px;
+  perspective: 1000px;
+  border-radius: 1px;
+  border-color: white;
+}
+
+.dotline {
+  margin-right: 10px;
+  position: relative;
+  width: 200px;
+  height: 160px;
+  perspective: 1000px;
+}
+
+.card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.card.solved .front,
+.card.solved .back {
+  display: none;
+}
+
+.card.solved .solved {
+  display: block;
+}
+
+.card .solved {
+  display: none;
+}
+
+/* Breakpoint 1: 1200px and up */
+@media (min-width: 1200px) {
+  .container {
+    margin-right: 30%;
+  }
+}
+
+/* Breakpoint 2: 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    margin-right: 20%;
+  }
+}
+
+/* Breakpoint 3: 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-image: url('assets/img-bg-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+  }
+  
+  .container {
+    margin-right: 10%;
+  }
+  .card {
+    width: 110px;
+    height: 150px;
+  }
+}
+
+/* Breakpoint 4: 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    margin-right: 0;
+  }
+  .card {
+    width: 90px;
+    height: 120px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* .memory-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .card {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    background-color: #555;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+   */
